@@ -3,8 +3,8 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -Iinclude -std=c++17
 
 # Raylib library paths (adjust these if needed)
-RAYLIB_INC = /usr/include
-RAYLIB_LIB = /usr/lib
+RAYLIB_INC = /home/yourusername/raylib/include  # Adjust to your raylib path
+RAYLIB_LIB = /usr/local/lib
 RAYLIB_FLAGS = -lraylib -lm -ldl -lpthread -lGL
 
 # Directories
@@ -13,7 +13,7 @@ INCLUDE_DIR = include
 BUILD_DIR = build
 
 # Sources and objects
-SRCS = $(wildcard $(SRC_DIR)/*.cpp)
+SRCS = $(wildcard $(SRC_DIR)/*.cpp)  # This already includes main.cpp
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Output binary
@@ -31,7 +31,7 @@ $(TARGET): $(OBJS)
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -I$(RAYLIB_INC) -c $< -o $@
-	
+
 # Run the game
 run: $(TARGET)
 	@echo "Running $(TARGET)..."

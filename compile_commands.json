@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-std=c++17",
+      "-I/home/yourusername/raylib/include",
+      "-c",
+      "-o",
+      "build/Background.o",
+      "src/Background.cpp"
+    ],
+    "directory": "/home/tiwatux/C++/PeaShooter",
+    "file": "/home/tiwatux/C++/PeaShooter/src/Background.cpp",
+    "output": "/home/tiwatux/C++/PeaShooter/build/Background.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-std=c++17",
+      "-I/home/yourusername/raylib/include",
+      "-c",
+      "-o",
+      "build/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/home/tiwatux/C++/PeaShooter",
+    "file": "/home/tiwatux/C++/PeaShooter/src/main.cpp",
+    "output": "/home/tiwatux/C++/PeaShooter/build/main.o"
+  }
+]
