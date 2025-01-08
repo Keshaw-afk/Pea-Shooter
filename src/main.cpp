@@ -1,19 +1,32 @@
-#include <iostream>
-#include "background.h"
+#include <raylib.h>
+#include <background.h>
 
-int main() {
-    // Create an object of the Background class
-    Background bg(0.0f, 0.0f);  // Initial position (0, 0)
-    
-    // Display the initial background position
-    bg.displayPosition();
+int main(){
 
-    // Change position
-    bg.setPosition(100.0f, 200.0f);
+	const int screen_width = 1200;
+	const int screen_height = 800;
 
-    // Display the updated position
-    bg.displayPosition();
+	InitWindow(screen_width, screen_height, "Pea Shooter");
 
-    return 0;
+	SetTargetFPS(20);
+
+	Background background;
+
+	background.setPosition(0.0f, 0.0f);
+	background.backgroundSprite("assets/background.png");
+
+	while(!WindowShouldClose()){
+		BeginDrawing();
+
+		ClearBackground(RAYWHITE);
+
+		background.draw();
+
+		EndDrawing();	
+	}
+
+	CloseWindow();
+
+
+	return 0;
 }
-

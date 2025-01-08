@@ -1,26 +1,25 @@
-#ifndef BACKGROUND_H
-#define BACKGROUND_H
+#ifndef background_h
+#define background_h
+
+#include <string>
+#include <raylib.h>
 
 class Background {
 private:
-    float positionX, positionY;  // Private properties for background position
-
+	float positionX, positionY;
+	Texture2D sprite;
 public:
-    // Constructor to initialize position
-    Background(float x, float y);
+	Background();
 
-    // Getter for positionX
-    float getPositionX() const;
+	float getPositionX() const;
 
-    // Getter for positionY
-    float getPositionY() const;
+	float getPositionY() const;
 
-    // Setter for position
-    void setPosition(float x, float y);
+	void setPosition(float x, float y);
 
-    // Method to display the position (for testing)
-    void displayPosition() const;
+	void backgroundSprite(const std::string& spritePath);
+
+	void draw() const;
 };
 
-#endif // BACKGROUND_H
-
+#endif 
